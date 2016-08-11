@@ -1,5 +1,11 @@
 Contestapp::Application.routes.draw do
-  resources :accounts
+
+  resources :products do
+    collection do
+      get 'import'
+    end
+    resources :variants
+  end
 
   get "dashboard/index"
   root "dashboard#index"
