@@ -4,6 +4,12 @@ Contestapp::Application.routes.draw do
   get "dashboard/index"
   root "dashboard#index"
 
+  resources :accounts do
+    member do
+      get "test_connection"
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

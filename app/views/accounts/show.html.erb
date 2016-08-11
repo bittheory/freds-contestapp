@@ -4,6 +4,8 @@
 </div>
 
 <dl class="dl-horizontal">
+  <dt><strong>Shop ID:</strong></dt>
+  <dd><%= @account.id %></dd>
   <dt><strong><%= model_class.human_attribute_name(:shopify_account_url) %>:</strong></dt>
   <dd><%= @account.shopify_account_url %></dd>
   <dt><strong><%= model_class.human_attribute_name(:shopify_api_key) %>:</strong></dt>
@@ -18,6 +20,7 @@
               accounts_path, :class => 'btn btn-default'  %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_account_path(@account), :class => 'btn btn-default' %>
+<%= link_to "Test Connection", test_connection_account_path(@account), :class => 'btn btn-default' %>
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               account_path(@account),
               :method => 'delete',
