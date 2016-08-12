@@ -7,6 +7,12 @@ Contestapp::Application.routes.draw do
     resources :variants
   end
 
+  resources :orders do
+    collection do
+      get "import"
+    end
+  end
+
   get "dashboard/index"
   root "dashboard#index"
 
