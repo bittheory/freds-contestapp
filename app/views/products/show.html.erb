@@ -6,9 +6,9 @@
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
   <dd><%= @product.name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:shopify_product_id) %>:</strong></dt>
+  <dt><strong><%= model_class.human_attribute_name(:shopify_product_id).titleize %>:</strong></dt>
   <dd><%= @product.shopify_product_id %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:last_shopify_sync) %>:</strong></dt>
+  <dt><strong><%= model_class.human_attribute_name(:last_shopify_sync).titleize %>:</strong></dt>
   <dd><%= @product.last_shopify_sync %></dd>
 </dl>
 

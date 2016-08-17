@@ -7,18 +7,18 @@
   <dt><strong><%= model_class.human_attribute_name(:number) %>:</strong></dt>
   <dd><%= @order.number %></dd>
   <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
-  <dd><%= @order.email %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:first_name) %>:</strong></dt>
+  <dd><%= mail_to @order.email, @order.email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:first_name).titleize %>:</strong></dt>
   <dd><%= @order.first_name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:last_name) %>:</strong></dt>
+  <dt><strong><%= model_class.human_attribute_name(:last_name).titleize %>:</strong></dt>
   <dd><%= @order.last_name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:shopify_order_id) %>:</strong></dt>
+  <dt><strong><%= model_class.human_attribute_name(:shopify_order_id).titleize %>:</strong></dt>
   <dd><%= @order.shopify_order_id %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:order_date) %>:</strong></dt>
-  <dd><%= @order.order_date %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:order_date).titleize %>:</strong></dt>
+  <dd><%= @order.order_date.strftime("%d/%m/%Y %T") %></dd>
   <dt><strong><%= model_class.human_attribute_name(:total) %>:</strong></dt>
-  <dd><%= @order.total %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:financial_status) %>:</strong></dt>
+  <dd><%= number_to_currency @order.total, unit: "£" %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:financial_status).titleize %>:</strong></dt>
   <dd><%= @order.financial_status %></dd>
 </dl>
 

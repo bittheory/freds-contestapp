@@ -32,7 +32,6 @@ class ShopifyIntegration
     created = failed = 0
     page = 1
 
-
     # Get the first page of orders
     shopify_orders = ShopifyAPI::Order.find(:all, params: {limit: 50, page: page})
 
@@ -81,8 +80,6 @@ class ShopifyIntegration
       # Grab the next page of products
       page += 1
       shopify_orders = ShopifyAPI::Order.find(:all, params: {limit: 50, page: page})
-
-
     end
 
     # Once we are done, return the results
@@ -149,8 +146,6 @@ class ShopifyIntegration
       # Grab the next page of products
       page += 1
       shopify_products = ShopifyAPI::Product.find(:all, params: {limit: 100, page: page})
-
-
     end
 
     # Return the results once no more products are left

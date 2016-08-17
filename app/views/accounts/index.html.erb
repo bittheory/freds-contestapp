@@ -5,12 +5,12 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:shopify_account_url) %></th>
-      <th><%= model_class.human_attribute_name(:shopify_api_key) %></th>
-      <th><%= model_class.human_attribute_name(:shopify_password) %></th>
-      <th><%= model_class.human_attribute_name(:shopify_shared_secret) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%= model_class.human_attribute_name(:id).upcase %></th>
+      <th><%= model_class.human_attribute_name(:shopify_account_url).titleize %></th>
+      <th><%= model_class.human_attribute_name(:shopify_api_key).titleize %></th>
+      <th><%= model_class.human_attribute_name(:shopify_password).titleize %></th>
+      <th><%= model_class.human_attribute_name(:shopify_shared_secret).titleize %></th>
+      <th><%= model_class.human_attribute_name(:created_at).titleize %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
