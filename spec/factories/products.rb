@@ -1,7 +1,12 @@
 FactoryGirl.define do
   factory :product do
-    name "MyString"
-    shopify_product_id 1
-    last_shopify_sync "2016-08-11 16:10:13"
+    sequence :name do |n|
+      "Product #{n}"
+    end
+
+    shopify_product_id {rand(10000000)}
+
+    last_shopify_sync {DateTime.now - rand(5).days}
   end
+
 end

@@ -9,12 +9,13 @@ Contestapp::Application.routes.draw do
 
   resources :orders do
     collection do
-      get "import"
+      get 'import'
     end
   end
 
-  get "dashboard/index"
-  root "dashboard#index"
+  get 'dashboard/index'
+  root 'dashboard#index'
+  post "create_contest" => 'dashboard#create_contest'
 
   resources :accounts do
     member do
