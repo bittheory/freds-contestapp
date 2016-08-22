@@ -12,7 +12,7 @@
     <div class="control-group">
       <%= f.label :product_id, "Type *" %>
       <div class="controls">
-        <select id="contest_product_id" name="contest[product_id]" required="required">
+        <select id="contest_product_id" name="contest[product_id]" required="required" style="max-width: 100%">
           <option>Any Product</option>
           <optgroup label="Specific Product">
             <% @products.each do |product| %>

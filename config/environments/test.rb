@@ -33,4 +33,8 @@ Contestapp::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+
+  SHOPIFY_API_KEY = "123abc"
+  SHOPIFY_SHARED_SECRET = "test-secret"
+  DOMAIN = "http://localhost:3000"
 end
